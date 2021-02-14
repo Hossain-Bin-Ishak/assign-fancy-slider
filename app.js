@@ -8,6 +8,15 @@ const sliderContainer = document.getElementById('sliders');
 let sliders = [];
 
 
+
+
+var search = document.getElementById("search");
+
+search.addEventListener("keypress", function(event) {
+    if (event.keyCode == 13)
+        searchBtn.click();
+});
+
 // If this key doesn't work
 // Find the name in the url and go to their website
 // to create your own api key
