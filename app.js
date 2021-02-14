@@ -7,11 +7,8 @@ const sliderContainer = document.getElementById('sliders');
 // selected image 
 let sliders = [];
 
-
-
-
+// Search Button Event Handler
 var search = document.getElementById("search");
-
 search.addEventListener("keypress", function(event) {
     if (event.keyCode == 13)
         searchBtn.click();
@@ -54,6 +51,7 @@ const selectItem = (event, img) => {
     if (item === -1) {
         sliders.push(img);
     } else {
+        // Image Deselect and Select
         element.classList.remove('added');
         let item = sliders.indexOf(img);
         if (item > -1) {
@@ -100,8 +98,6 @@ const createSlider = () => {
             changeSlide(slideIndex);
         }, duration);
     }
-
-
 
 }
 
